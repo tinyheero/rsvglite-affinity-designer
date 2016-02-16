@@ -19,11 +19,15 @@ library("knitr")
 library("svglite")
 library("ggplot2")
 library("magrittr")
+library("cowplot")
 
 knitr::opts_chunk$set(
   dev = "svglite",
   fig.path = "figures/"
 )
+
+# Sets the default theme to have white background and borders around the graph
+theme_set(theme_bw())
 ```
 
 # ggplot2
@@ -31,24 +35,22 @@ knitr::opts_chunk$set(
 
 Here we generate a simple ggplot2 scatterplot of the mtcars dataset.
 
-```{r svglite_test}
-mtcars %>%
+```{r ggplot2_test}
+p1 <- mtcars %>%
   ggplot(aes(x = wt, y = mpg)) +
   geom_point()
+
+p1
 ```
 
 # cowplot 
 ***
 
-Here we generate a simple ggplot2 scatterplot of the mtcars dataset.
+Here we use cowplot 
 
-```{r svglite_test}
-mtcars %>%
-  ggplot(aes(x = wt, y = mpg)) +
-  geom_point()
+```{r cowplot_test, fig.width = 10}
+plot_grid(p1, p1, ncol = 2)
 ```
-
-
 
 # R Session
 ***
