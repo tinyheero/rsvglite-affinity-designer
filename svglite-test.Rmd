@@ -1,0 +1,58 @@
+---
+title: "svglite R package Test with Mac Affinity Designer"
+author: "Fong Chun Chan"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: false
+---
+
+# Background
+***
+
+This rmarkdown is meant to test the svglite R package with Mac's Affinity Designer.
+
+```{r setup}
+library("knitr")
+library("svglite")
+library("ggplot2")
+library("magrittr")
+
+knitr::opts_chunk$set(
+  dev = "svglite",
+  fig.path = "figures/"
+)
+```
+
+# ggplot2
+***
+
+Here we generate a simple ggplot2 scatterplot of the mtcars dataset.
+
+```{r svglite_test}
+mtcars %>%
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point()
+```
+
+# cowplot 
+***
+
+Here we generate a simple ggplot2 scatterplot of the mtcars dataset.
+
+```{r svglite_test}
+mtcars %>%
+  ggplot(aes(x = wt, y = mpg)) +
+  geom_point()
+```
+
+
+
+# R Session
+***
+
+```{r}
+devtools::session_info()
+```
