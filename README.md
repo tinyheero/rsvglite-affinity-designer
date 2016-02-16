@@ -1,2 +1,2 @@
-# rsvglite-affinity-designer
-Testing the rsvglite R package with Mac Affinity Designer
+# svglite-affinity-designer
+Testing the svglite R package with Mac Affinity Designer
