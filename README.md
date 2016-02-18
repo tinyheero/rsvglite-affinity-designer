@@ -1,10 +1,10 @@
 # svglite-affinity-designer
 
-Testing the svglite R package with Mac Affinity Designer (v1.4.1)
+Testing the [svglite R package](https://cran.r-project.org/web/packages/svglite/index.html) with Mac [Affinity Designer](https://affinity.serif.com) (v1.4.1)
 
 # Problem
 
-When combining multiple plots (using cowplot), the resultant svg comes out with two black boxes. 
+When combining multiple plots (using [cowplot](https://cran.r-project.org/web/packages/cowplot/)), the resultant svg comes out with two black boxes. 
 
 According to [Affinity Designer forums](https://affinity.serif.com/forum/index.php?/topic/18153-svg-from-r-using-ggplot2svglitecowplot/):
 
